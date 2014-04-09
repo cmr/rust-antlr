@@ -39,7 +39,7 @@ grammar Rust;
 
     }
 
-import "xidstart" , "xidcont";
+import Xidstart, Xidcont;
 
 /// <grammar>
 
