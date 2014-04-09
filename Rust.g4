@@ -145,7 +145,7 @@ lib_selectors : LPAREN (meta_items)? RPAREN ;
 outer_attrs : /* nothing */ | outer_attr outer_attrs ;
 outer_attr : POUND LBRACKET meta_item RBRACKET
   | OUTER_DOC_COMMENT ;
-inner_attr : POUND LBRACKET meta_item RBRACKET SEMI
+inner_attr : POUND BANG LBRACKET meta_item RBRACKET
   | INNER_DOC_COMMENT ;
 meta_item : ident
   | ident EQ lit
@@ -756,6 +756,7 @@ RBRACKET  : ']' ;
 LBRACE    : '{' ;
 RBRACE    : '}' ;
 POUND     : '#' ;
+BANG      : '!' ;
 DOLLAR    : '$' ;
 
 LIT_INT
