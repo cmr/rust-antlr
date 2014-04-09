@@ -80,7 +80,7 @@ foreign_mod
   : EXTERN (LIT_STR)? LBRACE inner_attr* foreign_item* RBRACE ;
 foreign_item
   : outer_attrs STATIC ident COLON ty SEMI
-  | outer_attrs visibility (UNSAFE)? FN ident (LT (generic_decls)? GT)? LPAREN (args)? RPAREN ret_ty SEMI
+  | outer_attrs visibility FN ident LPAREN (args)? RPAREN ret_ty SEMI
   ;
 
 type_decl : TYPE ident (LT generic_decls GT)? EQ ty SEMI ;
