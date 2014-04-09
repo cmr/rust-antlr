@@ -165,7 +165,6 @@ self_ty_and_maybenamed_args
   ;
 self_ty
   : AND (lifetime)? mutability SELF
-  | AT mutability SELF
   | TILDE mutability SELF
   | SELF
   ;
