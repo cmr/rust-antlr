@@ -108,8 +108,8 @@ enum_variant_decl
 
 trait_decl: TRAIT ident (LT generic_decls GT)? (COLON traits)? LBRACE trait_method* RBRACE ;
 trait_method
-  : attrs_and_vis (UNSAFE)? FN ident (LT (generic_decls)? GT)? LPAREN (self_ty_and_maybenamed_args)? RPAREN ret_ty SEMI
-  | attrs_and_vis (UNSAFE)? FN ident (LT (generic_decls)? GT)? LPAREN (self_ty_and_maybenamed_args)? RPAREN ret_ty fun_body
+  : attrs_and_vis (UNSAFE)? FN ident (LT generic_decls GT)? LPAREN (self_ty_and_maybenamed_args)? RPAREN ret_ty SEMI
+  | attrs_and_vis (UNSAFE)? FN ident (LT generic_decls GT)? LPAREN (self_ty_and_maybenamed_args)? RPAREN ret_ty fun_body
   ;
 
 impl : IMPL (LT (generic_decls)? GT)? ty impl_body ;
