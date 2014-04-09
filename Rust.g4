@@ -93,7 +93,6 @@ struct_decl
 struct_fields : struct_field COMMA struct_fields | struct_field ;
 struct_field
   : attrs_and_vis ident COLON ty
-  | outer_attrs DROP block
   ;
 
 enum_decl
