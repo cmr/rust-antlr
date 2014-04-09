@@ -118,7 +118,7 @@ impl_body
   : LBRACE impl_method* RBRACE ;
 impl_method : attrs_and_vis (UNSAFE)? FN ident (LT generic_decls GT)? LPAREN (self_ty_and_args)? RPAREN ret_ty fun_body  ;
 
-item_fn_decl : FN ident (LT (generic_decls)? GT)? LPAREN (args)? RPAREN ret_ty fun_body ;
+item_fn_decl : FN ident (LT generic_decls GT)? LPAREN (args)? RPAREN ret_ty fun_body ;
 fun_body : LBRACE inner_attr* view_item* block_element* (block_last_element)? RBRACE ;
 block : LBRACE view_item* block_element* (block_last_element)? RBRACE ;
 block_element : expr_RL (SEMI)+
