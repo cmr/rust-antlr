@@ -84,7 +84,7 @@ foreign_item
   | outer_attrs visibility (UNSAFE)? FN ident (LT (generic_decls)? GT)? LPAREN (args)? RPAREN ret_ty SEMI
   ;
 
-type_decl : TYPE ident (LT (generic_decls)? GT)? EQ ty SEMI ;
+type_decl : TYPE ident (LT generic_decls GT)? EQ ty SEMI ;
 
 struct_decl
   : STRUCT ident (LT (generic_decls)? GT)? LBRACE (struct_fields (COMMA)?)? RBRACE
