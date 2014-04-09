@@ -153,10 +153,7 @@ meta_items : meta_item
 
 
 args : arg | arg COMMA args ;
-arg : (arg_mode)? mutability pat COLON ty ;
-arg_mode : AND AND | PLUS | obsoletemode ;
-// obsolete ++ mode used in librustc/middle/region.rs
-obsoletemode : PLUS PLUS ;
+arg : mutability pat COLON ty ;
 
 self_ty_and_args
   : self_ty (COMMA args)?
