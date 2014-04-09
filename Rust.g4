@@ -137,8 +137,7 @@ macro_item
 
 attrs_and_vis : outer_attrs visibility ;
 visibility : PUB | PRIV | /*nothing*/ ;
-// overly loose on "const", but soon it will disappear completely?
-mutability : MUT | CONST | /*nothing*/ ;
+mutability : MUT | /*nothing*/ ;
 lib_selectors : LPAREN (meta_items)? RPAREN ;
 outer_attrs : /* nothing */ | outer_attr outer_attrs ;
 outer_attr : POUND LBRACKET meta_item RBRACKET
