@@ -86,10 +86,11 @@ foreign_item
 type_decl : TYPE ident (LT generic_decls GT)? EQ ty SEMI ;
 
 struct_decl
-  : STRUCT ident (LT generic_decls GT)? LBRACE struct_field+ (COMMA)? RBRACE
+  : STRUCT ident (LT generic_decls GT)? LBRACE struct_fields (COMMA)? RBRACE
   | STRUCT ident (LT generic_decls GT)? LPAREN tys RPAREN SEMI
   | STRUCT ident (LT generic_decls GT)? SEMI
   ;
+struct_fields : struct_field COMMA struct_fields | struct_field ;
 struct_field
   : attrs_and_vis ident COLON ty
   ;
